@@ -1,0 +1,15 @@
+@reference "../../app/globals.css";
+
+.checkbox {
+  @apply border-border;
+}
+
+.sheetContent {
+  @apply bg-background w-80 overflow-y-auto px-5 py-5;
+  max-width: calc(100vw - 2rem);
+  scrollbar-width: none;
+}
+
+.sheetContent::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,75 @@
+@reference "../../app/globals.css";
+
+.scroll {
+  @apply mt-6 space-y-4 overflow-y-auto pr-1;
+  max-height: 26rem;
+}
+
+.itemHeader {
+  @apply flex items-start justify-between gap-4;
+}
+
+.itemContent {
+  @apply flex min-w-0 flex-1 items-center gap-4;
+}
+
+.itemCopy {
+  @apply min-w-0 flex-1;
+}
+
+.itemDescription {
+  @apply mt-2 line-clamp-2 text-sm leading-6 text-muted-foreground break-words;
+}
+
+.removeButton {
+  @apply cursor-pointer rounded-full p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground;
+}
+
+@media (max-width: 450px) {
+  .itemHeader {
+    @apply gap-3;
+  }
+
+  .itemContent {
+    @apply items-start gap-3;
+  }
+
+  .itemCopy :global(.section-card-subheading) {
+    @apply text-base leading-6;
+  }
+
+  .itemDescription {
+    -webkit-line-clamp: 3;
+  }
+}
+
+@media (max-width: 380px) {
+  .itemHeader {
+    @apply flex-col;
+  }
+
+  .itemContent {
+    @apply w-full;
+  }
+
+  .removeButton {
+    @apply self-end;
+  }
+}
+
+@media (min-width: 640px) {
+  .scroll {
+    max-height: 30rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scroll::-webkit-scrollbar {
+    display: none;
+  }
+}

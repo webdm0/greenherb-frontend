@@ -1,0 +1,26 @@
+@reference "../../../app/globals.css";
+
+.mainGrid {
+  @apply grid gap-8;
+}
+
+@media (min-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: minmax(0, 1fr) 380px;
+    align-items: start;
+  }
+}
+
+.overviewGrid {
+  @apply grid gap-6;
+}
+
+@media (min-width: 1280px) {
+  .overviewGrid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  }
+}
+
+.imageSkeletonAspect {
+  aspect-ratio: 4 / 4.5;
+}

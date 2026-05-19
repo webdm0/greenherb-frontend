@@ -1,0 +1,232 @@
+@reference "../../app/globals.css";
+
+.infoCard {
+  @apply min-w-0 rounded-[1.5rem] border border-border/50 bg-background/85 px-4 py-3;
+}
+
+.infoValue {
+  @apply mt-1 min-w-0 text-sm text-foreground;
+  overflow-wrap: anywhere;
+}
+
+.previewHeader {
+  @apply flex min-w-0 items-center justify-between gap-3;
+}
+
+.previewHeading {
+  @apply min-w-0 text-xs font-semibold uppercase text-muted-foreground;
+  letter-spacing: 0.16em;
+}
+
+.previewCount {
+  @apply shrink-0 text-sm text-muted-foreground;
+}
+
+.previewItemName {
+  @apply block truncate text-sm font-medium text-foreground transition-colors hover:text-accent;
+  max-width: 10rem;
+}
+
+.previewItemText {
+  @apply truncate text-sm font-medium text-foreground;
+  max-width: 10rem;
+}
+
+.previewItemCard {
+  @apply flex min-w-0 items-center gap-3 rounded-2xl border border-border/40 bg-card px-3 py-2;
+}
+
+.lineItemRow {
+  @apply grid items-center gap-4 rounded-2xl border border-border/40 bg-background/85 p-3;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+}
+
+.lineItemThumb {
+  @apply rounded-2xl border border-border/40;
+  height: 72px;
+  width: 72px;
+}
+
+.lineItemCopy {
+  @apply min-w-0;
+}
+
+.lineItemLink {
+  @apply inline-flex min-w-0 items-center gap-1.5 font-medium text-foreground transition-colors hover:text-accent;
+}
+
+.lineItemLinkIcon {
+  @apply h-3 w-3 shrink-0 opacity-0 transition-opacity group-hover:opacity-100;
+}
+
+.lineItemPrice {
+  @apply shrink-0 text-sm font-semibold text-foreground;
+}
+
+.itemsScroll {
+  @apply mt-4 space-y-3 overflow-y-auto pr-1;
+  max-height: 24rem;
+}
+
+.detailsGrid {
+  @apply grid gap-5 bg-secondary/25 px-5 py-5 sm:px-7;
+}
+
+@media (min-width: 1024px) {
+  .detailsGrid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  }
+}
+
+.headerSurface {
+  @apply px-5 py-5 sm:px-7;
+  background: linear-gradient(180deg, rgba(247, 248, 242, 0.92), rgba(255, 255, 255, 0.98));
+}
+
+.headerActions {
+  @apply flex min-w-0 flex-col gap-3 sm:flex-row sm:items-center lg:justify-end;
+}
+
+.summaryCard {
+  @apply rounded-[1.5rem] border border-border/50 bg-background/85 px-4 py-3 text-left;
+}
+
+.detailsButton {
+  @apply min-w-0;
+}
+
+@media (min-width: 640px) {
+  .summaryCard {
+    min-width: 160px;
+  }
+}
+
+.previewGrid {
+  @apply grid gap-3;
+}
+
+.infoGrid {
+  @apply grid min-w-0 gap-3 sm:grid-cols-3 lg:grid-cols-1;
+}
+
+@media (min-width: 1024px) {
+  .previewGrid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .previewItemCard {
+    @apply w-full items-start;
+  }
+
+  .previewItemName,
+  .previewItemText {
+    max-width: none;
+  }
+
+  .previewHeader {
+    @apply items-start;
+  }
+
+  .previewHeading {
+    overflow-wrap: anywhere;
+  }
+
+  .lineItemRow {
+    @apply gap-3;
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .lineItemThumb {
+    height: 64px;
+    width: 64px;
+  }
+
+  .lineItemCopy {
+    @apply flex min-w-0 flex-col;
+  }
+
+  .lineItemLink {
+    @apply flex;
+  }
+
+  .lineItemPrice {
+    @apply mt-2 justify-self-start;
+    grid-column: 2;
+  }
+
+  .infoGrid {
+    @apply grid-cols-1;
+  }
+}
+
+@media (max-width: 640px) {
+  .itemsScroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .itemsScroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 388px) {
+  .headerSurface {
+    @apply px-4;
+  }
+
+  .headerActions {
+    @apply w-full;
+  }
+
+  .summaryCard {
+    @apply w-full;
+  }
+
+  .detailsButton {
+    @apply w-full px-4 text-sm;
+  }
+
+  .previewGrid {
+    @apply gap-2.5;
+  }
+
+  .previewItemCard {
+    @apply gap-2.5 px-2.5;
+  }
+
+  .previewItemName,
+  .previewItemText {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 380px) {
+  .lineItemRow {
+    grid-template-columns: 1fr;
+  }
+
+  .lineItemThumb,
+  .lineItemPrice {
+    grid-column: auto;
+  }
+
+  .lineItemPrice {
+    @apply mt-0;
+  }
+}
+
+.detailsToggle {
+  @apply grid transition-all duration-300;
+}
+
+.detailsExpanded {
+  @apply border-t border-border/60;
+  grid-template-rows: 1fr;
+}
+
+.detailsCollapsed {
+  grid-template-rows: 0fr;
+}

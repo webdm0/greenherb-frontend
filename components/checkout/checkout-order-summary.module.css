@@ -1,0 +1,16 @@
+@reference "../../app/globals.css";
+
+.promoBadge {
+  @apply rounded-full bg-primary px-2.5 py-0.5 font-semibold text-primary-foreground hover:bg-primary;
+  font-size: 11px;
+}
+
+.promoCodeText {
+  @apply text-sm font-semibold uppercase;
+  letter-spacing: 0.08em;
+}
+
+.promoInput {
+  @apply h-9 flex-1 rounded-full border-0 bg-transparent px-3 text-sm font-semibold shadow-none focus-visible:ring-0 focus-visible:ring-offset-0;
+  letter-spacing: 0.08em;
+}

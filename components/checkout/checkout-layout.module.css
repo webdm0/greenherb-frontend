@@ -1,0 +1,12 @@
+@reference "../../app/globals.css";
+
+.mainGrid {
+  @apply grid gap-8;
+}
+
+@media (min-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    align-items: start;
+  }
+}

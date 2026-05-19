@@ -1,0 +1,23 @@
+@reference "../../app/globals.css";
+
+.headerRow {
+  @apply flex flex-col gap-4;
+}
+
+.actionRow {
+  @apply mt-5 flex flex-col gap-3;
+}
+
+@media (min-width: 381px) {
+  .headerRow {
+    @apply flex-row items-start justify-between;
+  }
+
+  .actionRow {
+    @apply flex-row items-center;
+  }
+
+  .actionButton {
+    flex: 1 1 0%;
+  }
+}

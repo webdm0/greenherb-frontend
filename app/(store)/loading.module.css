@@ -1,0 +1,16 @@
+@reference "../../app/globals.css";
+
+.grid {
+  @apply grid gap-8;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 280px minmax(0, 1fr);
+  }
+}
+
+.sidebar {
+  @apply hidden border border-border/60 bg-card/80 p-6 lg:block;
+  border-radius: 1.75rem;
+}

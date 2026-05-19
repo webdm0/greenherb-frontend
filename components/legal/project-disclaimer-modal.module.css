@@ -1,0 +1,11 @@
+@reference "../../app/globals.css";
+
+.copyCompact {
+  @apply mt-5 space-y-4 text-sm leading-6 text-muted-foreground;
+}
+
+@media (min-width: 640px) {
+  .copyCompact {
+    font-size: 15px;
+  }
+}

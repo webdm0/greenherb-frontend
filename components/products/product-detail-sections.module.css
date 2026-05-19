@@ -1,0 +1,18 @@
+@reference "../../app/globals.css";
+
+.brandBadge {
+  @apply rounded-full bg-primary px-3 py-1 uppercase;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+}
+
+.heroGrid {
+  @apply grid gap-10 pb-12 pt-2;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+    align-items: start;
+  }
+}

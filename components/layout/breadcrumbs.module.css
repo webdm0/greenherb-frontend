@@ -1,0 +1,9 @@
+@reference "../../app/globals.css";
+
+.link {
+  @apply flex min-w-0 items-center gap-1.5 break-words text-muted-foreground transition-colors hover:text-foreground;
+}
+
+.current {
+  @apply flex min-w-0 items-center gap-1.5 break-words font-medium text-foreground;
+}

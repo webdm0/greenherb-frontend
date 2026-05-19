@@ -1,0 +1,87 @@
+@reference "../../app/globals.css";
+
+.featureCard {
+  @apply rounded-lg border border-primary-foreground/10 bg-primary-foreground/[0.06] p-4;
+}
+
+.featureIcon {
+  @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-foreground/10;
+}
+
+.sectionTitle {
+  @apply mb-4 font-serif text-lg font-semibold;
+}
+
+.mutedCopy {
+  @apply text-primary-foreground/80;
+}
+
+.link {
+  @apply text-primary-foreground/80 transition-colors hover:text-primary-foreground;
+}
+
+.accountLink {
+  @apply inline-flex items-center gap-2 text-primary-foreground/80 transition-colors hover:text-primary-foreground;
+}
+
+.bottomLink {
+  @apply text-primary-foreground/60 transition-colors hover:text-primary-foreground cursor-pointer;
+}
+
+.footerSourceBlock {
+  @apply rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.06];
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.footerSourceCodeIcon {
+  @apply shrink-0 text-primary-foreground/55;
+}
+
+.footerSourceText {
+  @apply text-xs text-primary-foreground;
+  letter-spacing: 0.02em;
+}
+
+.footerSourceDivider {
+  @apply h-3.5 w-px shrink-0 bg-primary-foreground/15;
+}
+
+.footerSourceLink {
+  @apply text-xs text-primary-foreground/65 transition-colors hover:text-primary-foreground;
+  letter-spacing: 0.02em;
+}
+
+.footerSourceDot {
+  @apply h-[3px] w-[3px] shrink-0 rounded-full bg-primary-foreground/35;
+}
+
+.profileLink {
+  @apply inline-flex items-center gap-1.5 text-primary-foreground/70 transition-colors hover:text-primary-foreground;
+}
+
+.supportEmail {
+  @apply text-primary-foreground/70 transition-colors hover:text-primary-foreground;
+  overflow-wrap: anywhere;
+}
+
+.mainGrid {
+  @apply grid grid-cols-2 gap-x-6 gap-y-8;
+}
+
+@media (min-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: minmax(0, 1.4fr) repeat(4, minmax(0, 1fr));
+  }
+}
+
+.bottomGrid {
+  @apply grid gap-4 text-center lg:items-center;
+}
+
+@media (min-width: 1024px) {
+  .bottomGrid {
+    grid-template-columns: 1fr auto 1fr;
+  }
+}

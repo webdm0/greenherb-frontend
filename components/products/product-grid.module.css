@@ -1,0 +1,11 @@
+@reference "../../app/globals.css";
+
+.emptyState {
+  @apply p-8 text-center;
+}
+
+@media (min-width: 1024px) {
+  .emptyState {
+    min-height: 28rem;
+  }
+}

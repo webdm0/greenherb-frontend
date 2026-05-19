@@ -1,0 +1,9 @@
+@reference "../../app/globals.css";
+
+.searchInput {
+  @apply h-10 bg-secondary border-border pl-9 pr-10;
+}
+
+.searchInput::-webkit-search-cancel-button {
+  display: none;
+}
